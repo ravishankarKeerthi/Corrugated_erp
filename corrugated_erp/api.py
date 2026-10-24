@@ -7,6 +7,20 @@ from frappe import _
 from frappe.utils import add_days, flt, today
 
 
+APP_ROLES = {
+	"System Manager", "Manufacturing Manager", "Manufacturing User", "Stock Manager", "Stock User",
+	"Sales Manager", "Sales User", "Purchase Manager", "Purchase User", "Quality Manager", "Accounts Manager",
+}
+
+
+@frappe.whitelist()
+def check_app_permission():
+	"""Show the Corrugated ERP tile to desk users who work with boxes, reels or production."""
+	if frappe.session.user == "Administrator":
+		return True
+	return bool(APP_ROLES & set(frappe.get_roles()))
+
+
 @frappe.whitelist()
 def get_box_prices(items, customer=None):
 	"""Latest submitted Box Costing price for each box spec (customer specific first).

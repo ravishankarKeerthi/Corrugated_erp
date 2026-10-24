@@ -1,0 +1,34 @@
+{
+ "app": "corrugated_erp",
+ "creation": "2026-10-24 12:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon": "factory",
+ "icon_type": "Link",
+ "idx": 2,
+ "label": "Box Shop Floor",
+ "link_to": "Box Shop Floor",
+ "link_type": "Workspace Sidebar",
+ "modified": "2026-10-24 12:00:00.000000",
+ "modified_by": "Administrator",
+ "name": "Box Shop Floor",
+ "owner": "Administrator",
+ "parent_icon": "Corrugated ERP",
+ "restrict_removal": 0,
+ "roles": [
+  {
+   "role": "Manufacturing User"
+  },
+  {
+   "role": "Manufacturing Manager"
+  },
+  {
+   "role": "Quality Manager"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "standard": 1
+}

@@ -5,6 +5,19 @@ app_description = "Corrugated box & packaging ERP on ERPNext - box costing, reel
 app_email = "ravimba2005@rediffmail.com"
 app_license = "mit"
 required_apps = ["erpnext"]
+app_logo_url = "/assets/corrugated_erp/images/corrugated-erp-logo.svg"
+app_home = "/app/corrugation"
+
+# Own tile on the apps screen (/apps) and in the app switcher
+add_to_apps_screen = [
+	{
+		"name": app_name,
+		"logo": app_logo_url,
+		"title": app_title,
+		"route": app_home,
+		"has_permission": "corrugated_erp.api.check_app_permission",
+	}
+]
 
 # Install / migrate
 after_install = "corrugated_erp.install.after_install"

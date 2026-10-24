@@ -31,11 +31,14 @@ The installer:
 * sets **Manufacturing Settings → Backflush Raw Materials Based On = Material Transferred for Manufacture**
   (so finished goods are costed on the paper actually used) and, on v16, **Transfer Extra Materials % = 20**.
   On v15 there is no separate setting; if a transfer is refused, raise *Overproduction Percentage for Work Order*.
-* creates four workspaces: **Corrugated ERP** (management), **Box Shop Floor**, **Reel Store** and **Box Sales**, each shown to the
+* adds a **Corrugated ERP** tile on the v16 apps screen with its own sidebar and desktop icons, and creates four
+  workspaces: **Corrugation** (management), **Box Shop Floor**, **Reel Store** and **Box Sales**, each shown to the
   matching ERPNext roles, plus the **Shop Floor Entry** page for operators on a phone or tablet
 
 Keep **Manufacturing Settings → Validate Components Quantities Per BOM** switched off: reel weights and actual
 gum / ink are transferred as used, not as per BOM.
+
+After an update, run **Migrate** on the site (Frappe Cloud: deploy, then migrate) and reload the browser.
 
 Upgrading from 0.1: `bench --site <site> migrate` runs the upgrade patch that fills the new fields.
 
