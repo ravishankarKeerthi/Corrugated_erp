@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-22 19:40:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "paper_reel",
+  "paper_item",
+  "system_weight",
+  "location"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "paper_reel",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Paper Reel",
+   "options": "Paper Reel"
+  },
+  {
+   "columns": 3,
+   "fieldname": "paper_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Paper Item",
+   "options": "Item"
+  },
+  {
+   "columns": 2,
+   "fieldname": "system_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "System Weight (kg)"
+  },
+  {
+   "columns": 2,
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bay / Rack"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Reel Stock Audit Missing",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

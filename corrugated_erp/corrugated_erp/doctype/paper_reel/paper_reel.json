@@ -1,0 +1,348 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "field:reel_no",
+ "creation": "2026-10-22 19:40:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reel_no",
+  "status",
+  "quality_status",
+  "cb_1",
+  "paper_item",
+  "item_name",
+  "gsm",
+  "bf",
+  "shade",
+  "cb_2",
+  "deckle_mm",
+  "deckle_inch",
+  "sb_weight",
+  "original_weight",
+  "current_weight",
+  "consumed_weight",
+  "cb_3",
+  "warehouse",
+  "location",
+  "moisture_pct",
+  "sb_source",
+  "supplier",
+  "supplier_reel_no",
+  "received_date",
+  "cb_4",
+  "reel_inward",
+  "purchase_receipt",
+  "opening_entry",
+  "parent_reel",
+  "reel_slitting",
+  "batch_no",
+  "last_audit_date",
+  "sb_remarks",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "reel_no",
+   "fieldtype": "Data",
+   "label": "Reel No",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "default": "Pending Receipt",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Pending Receipt\nIn Stock\nPartially Used\nConsumed\nDamaged\nReturned\nCancelled"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "quality_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Quality Status",
+   "options": "Pending\nPass\nFail"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "paper_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Paper Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "paper_item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "paper_item.paper_gsm",
+   "fieldname": "gsm",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "GSM"
+  },
+  {
+   "fetch_from": "paper_item.paper_bf",
+   "fieldname": "bf",
+   "fieldtype": "Float",
+   "label": "BF"
+  },
+  {
+   "fetch_from": "paper_item.paper_shade",
+   "fieldname": "shade",
+   "fieldtype": "Data",
+   "label": "Shade",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deckle_mm",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Deckle (mm)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "deckle_inch",
+   "fieldtype": "Float",
+   "label": "Deckle (inch)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_weight",
+   "fieldtype": "Section Break",
+   "label": "Weight & Location"
+  },
+  {
+   "fieldname": "original_weight",
+   "fieldtype": "Float",
+   "label": "Received Weight (kg)",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "current_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Balance Weight (kg)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "consumed_weight",
+   "fieldtype": "Float",
+   "label": "Consumed (kg)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "read_only": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Bay / Rack"
+  },
+  {
+   "fieldname": "moisture_pct",
+   "fieldtype": "Percent",
+   "label": "Moisture %"
+  },
+  {
+   "fieldname": "sb_source",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Supplier",
+   "options": "Supplier",
+   "read_only": 1
+  },
+  {
+   "fieldname": "supplier_reel_no",
+   "fieldtype": "Data",
+   "label": "Supplier Reel No"
+  },
+  {
+   "fieldname": "received_date",
+   "fieldtype": "Date",
+   "label": "Received Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reel_inward",
+   "fieldtype": "Link",
+   "label": "Reel Inward",
+   "options": "Reel Inward",
+   "read_only": 1
+  },
+  {
+   "fieldname": "purchase_receipt",
+   "fieldtype": "Link",
+   "label": "Purchase Receipt",
+   "options": "Purchase Receipt",
+   "read_only": 1
+  },
+  {
+   "fieldname": "opening_entry",
+   "fieldtype": "Link",
+   "label": "Opening Stock Entry",
+   "options": "Stock Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "parent_reel",
+   "fieldtype": "Link",
+   "label": "Cut From Reel",
+   "options": "Paper Reel",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reel_slitting",
+   "fieldtype": "Link",
+   "label": "Reel Slitting",
+   "options": "Reel Slitting",
+   "read_only": 1
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "Batch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_audit_date",
+   "fieldtype": "Date",
+   "label": "Last Audited On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_remarks",
+   "fieldtype": "Section Break",
+   "label": ""
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Paper Reel",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing Manager"
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing User"
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Purchase User"
+  }
+ ],
+ "search_fields": "paper_item,gsm,deckle_mm,status",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
