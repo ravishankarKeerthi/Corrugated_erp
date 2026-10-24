@@ -1,0 +1,4 @@
+Box Name,Customer,Customer Part No,Box Style,Dimension Basis,Length (mm),Width (mm),Height (mm),Ups per Sheet (Boxes per Sheet),Ply,Flute 1,Flute 2,Printing,No. of Colours,Joint,Stitches per Box,Boxes per Bundle,Pricing Basis,Required BS (kg/cm²),Layer (Layers),Type (Layers),Flute (Layers),Paper Item (Layers),GSM (Layers),BF (Layers)
+Shipper 10 kg,Sample Customer,CUST-PN-001,RSC,Inner,400,300,250,1,3,B,,Flexo,1,Stitched,6,25,Per Box,8,Top Liner,Liner,,KP-22BF-150-N,150,22
+,,,,,,,,,,,,,,,,,,,Flute 1,Flute,B,KP-16BF-100-N,100,16
+,,,,,,,,,,,,,,,,,,,Bottom Liner,Liner,,KP-18BF-120-N,120,18

@@ -1,0 +1,250 @@
+{
+ "charts": [
+  {
+   "chart_name": "Daily Production Waste",
+   "label": "Daily Production Waste"
+  }
+ ],
+ "content": "[{\"id\": \"77c2da45ca\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Shop Floor</b></span>\", \"col\": 12}}, {\"id\": \"7b1d47d7db\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Boxes Packed Today\", \"col\": 3}}, {\"id\": \"507307dc14\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Paper Used Today\", \"col\": 3}}, {\"id\": \"4e814555b0\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Waste Today\", \"col\": 3}}, {\"id\": \"b2dfb61774\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Open Box Work Orders\", \"col\": 3}}, {\"id\": \"a15dbd5994\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Daily Production Waste\", \"col\": 6}}, {\"id\": \"50832ebf0a\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"27d78722dd\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Quick Access</b></span>\", \"col\": 12}}, {\"id\": \"1a5d9c392a\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Shop Floor Entry\", \"col\": 3}}, {\"id\": \"05ed872c32\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Production Entry\", \"col\": 3}}, {\"id\": \"9a91e7945f\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Box WIP by Stage\", \"col\": 3}}, {\"id\": \"b8620e700d\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Reel Slitting\", \"col\": 3}}, {\"id\": \"4680f15e86\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"104a3a067d\", \"type\": \"card\", \"data\": {\"card_name\": \"Production\", \"col\": 4}}, {\"id\": \"a5dee5b419\", \"type\": \"card\", \"data\": {\"card_name\": \"Quality\", \"col\": 4}}, {\"id\": \"9dbf08aeab\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
+ "creation": "2026-10-22 19:40:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "tool",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Box Shop Floor",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Production",
+   "link_count": 6,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Shop Floor Entry",
+   "link_count": 0,
+   "link_to": "box-shop-floor",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Production Entry",
+   "link_count": 0,
+   "link_to": "Production Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Work Order",
+   "link_count": 0,
+   "link_to": "Work Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Deckle Plan",
+   "link_count": 0,
+   "link_to": "Deckle Plan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reel Slitting",
+   "link_count": 0,
+   "link_to": "Reel Slitting",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Box Tooling",
+   "link_count": 0,
+   "link_to": "Box Tooling",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quality",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Box Quality Test",
+   "link_count": 0,
+   "link_to": "Box Quality Test",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Paper Reel",
+   "link_count": 0,
+   "link_to": "Paper Reel",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Box WIP by Stage",
+   "link_count": 0,
+   "link_to": "Box WIP by Stage",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Production Summary",
+   "link_count": 0,
+   "link_to": "Production Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Downtime Analysis",
+   "link_count": 0,
+   "link_to": "Downtime Analysis",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Waste Analysis",
+   "link_count": 0,
+   "link_to": "Waste Analysis",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Box Shop Floor",
+ "number_cards": [
+  {
+   "label": "Boxes Packed Today",
+   "number_card_name": "Boxes Packed Today"
+  },
+  {
+   "label": "Paper Used Today (kg)",
+   "number_card_name": "Paper Used Today"
+  },
+  {
+   "label": "Waste Today (kg)",
+   "number_card_name": "Waste Today"
+  },
+  {
+   "label": "Open Box Work Orders",
+   "number_card_name": "Open Box Work Orders"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Manufacturing User"
+  },
+  {
+   "role": "Manufacturing Manager"
+  },
+  {
+   "role": "Quality Manager"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 31.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "Shop Floor Entry",
+   "link_to": "box-shop-floor",
+   "type": "Page"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "",
+   "label": "Production Entry",
+   "link_to": "Production Entry",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "label": "Box WIP by Stage",
+   "link_to": "Box WIP by Stage",
+   "type": "Report"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "",
+   "label": "Reel Slitting",
+   "link_to": "Reel Slitting",
+   "type": "DocType"
+  }
+ ],
+ "title": "Box Shop Floor"
+}

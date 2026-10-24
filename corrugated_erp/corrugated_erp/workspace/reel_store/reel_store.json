@@ -1,0 +1,237 @@
+{
+ "charts": [],
+ "content": "[{\"id\": \"127cba4884\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Reel Store</b></span>\", \"col\": 12}}, {\"id\": \"72e6301b08\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Reels In Stock\", \"col\": 3}}, {\"id\": \"543b14cdc3\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Reel Stock Kg\", \"col\": 3}}, {\"id\": \"bc40164995\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Reels Pending QC\", \"col\": 3}}, {\"id\": \"f6c0ab5916\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Paper Stock Value\", \"col\": 3}}, {\"id\": \"e18961e19d\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"5aec69e197\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Quick Access</b></span>\", \"col\": 12}}, {\"id\": \"8331eb477e\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Reel Inward\", \"col\": 3}}, {\"id\": \"394c258d3d\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Paper Reel\", \"col\": 3}}, {\"id\": \"8130740a3e\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Reel Stock Register\", \"col\": 3}}, {\"id\": \"40a644957d\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Paper Requirement Planning\", \"col\": 3}}, {\"id\": \"45d9ebe755\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"9cff87fd27\", \"type\": \"card\", \"data\": {\"card_name\": \"Reels\", \"col\": 4}}, {\"id\": \"5241bd1553\", \"type\": \"card\", \"data\": {\"card_name\": \"Quality\", \"col\": 4}}, {\"id\": \"f31223e586\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
+ "creation": "2026-10-22 19:40:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "stock",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Reel Store",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reels",
+   "link_count": 6,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reel Inward",
+   "link_count": 0,
+   "link_to": "Reel Inward",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Paper Reel",
+   "link_count": 0,
+   "link_to": "Paper Reel",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reel Slitting",
+   "link_count": 0,
+   "link_to": "Reel Slitting",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reel Stock Audit",
+   "link_count": 0,
+   "link_to": "Reel Stock Audit",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Receipt",
+   "link_count": 0,
+   "link_to": "Purchase Receipt",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Material Request",
+   "link_count": 0,
+   "link_to": "Material Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quality",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Box Quality Test",
+   "link_count": 0,
+   "link_to": "Box Quality Test",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Reel Stock Register",
+   "link_count": 0,
+   "link_to": "Reel Stock Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Reel Consumption",
+   "link_count": 0,
+   "link_to": "Reel Consumption",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Paper Requirement Planning",
+   "link_count": 0,
+   "link_to": "Paper Requirement Planning",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Reel Weight Shortage",
+   "link_count": 0,
+   "link_to": "Reel Weight Shortage",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Reel Store",
+ "number_cards": [
+  {
+   "label": "Reels In Stock",
+   "number_card_name": "Reels In Stock"
+  },
+  {
+   "label": "Reel Stock (kg)",
+   "number_card_name": "Reel Stock Kg"
+  },
+  {
+   "label": "Reels Pending QC",
+   "number_card_name": "Reels Pending QC"
+  },
+  {
+   "label": "Paper Stock Value",
+   "number_card_name": "Paper Stock Value"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Stock User"
+  },
+  {
+   "role": "Stock Manager"
+  },
+  {
+   "role": "Purchase User"
+  },
+  {
+   "role": "Purchase Manager"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 32.0,
+ "shortcuts": [
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "label": "Reel Inward",
+   "link_to": "Reel Inward",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "Paper Reel",
+   "link_to": "Paper Reel",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "",
+   "label": "Reel Stock Register",
+   "link_to": "Reel Stock Register",
+   "type": "Report"
+  },
+  {
+   "color": "Red",
+   "doc_view": "",
+   "label": "Paper Requirement Planning",
+   "link_to": "Paper Requirement Planning",
+   "type": "Report"
+  }
+ ],
+ "title": "Reel Store"
+}

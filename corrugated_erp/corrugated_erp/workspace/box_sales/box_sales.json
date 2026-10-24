@@ -1,0 +1,242 @@
+{
+ "charts": [],
+ "content": "[{\"id\": \"be874e10b3\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Box Sales</b></span>\", \"col\": 12}}, {\"id\": \"9eb5f6f511\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Costings Awaiting Approval\", \"col\": 3}}, {\"id\": \"206a3d50ba\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Boxes Below Min Margin\", \"col\": 3}}, {\"id\": \"837938c311\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Open Box Work Orders\", \"col\": 3}}, {\"id\": \"d075532514\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Open Complaints\", \"col\": 3}}, {\"id\": \"641e8945e4\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"823bedb17d\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Quick Access</b></span>\", \"col\": 12}}, {\"id\": \"3043db91d4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Box Specification\", \"col\": 3}}, {\"id\": \"40306fba75\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Box Costing\", \"col\": 3}}, {\"id\": \"c53ea0d94a\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Sales Order\", \"col\": 3}}, {\"id\": \"c80fb6311b\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Box WIP by Stage\", \"col\": 3}}, {\"id\": \"8de537a37b\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"4dd4073aca\", \"type\": \"card\", \"data\": {\"card_name\": \"Customers & Boxes\", \"col\": 4}}, {\"id\": \"f83caafbb9\", \"type\": \"card\", \"data\": {\"card_name\": \"Orders\", \"col\": 4}}, {\"id\": \"6734ffcf2e\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}]",
+ "creation": "2026-10-22 19:40:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "sell",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Box Sales",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customers & Boxes",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer",
+   "link_count": 0,
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Box Specification",
+   "link_count": 0,
+   "link_to": "Box Specification",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Box Costing",
+   "link_count": 0,
+   "link_to": "Box Costing",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Box Complaint",
+   "link_count": 0,
+   "link_to": "Box Complaint",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Orders",
+   "link_count": 5,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Quotation",
+   "link_count": 0,
+   "link_to": "Quotation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Order",
+   "link_count": 0,
+   "link_to": "Sales Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Blanket Order",
+   "link_count": 0,
+   "link_to": "Blanket Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Delivery Note",
+   "link_count": 0,
+   "link_to": "Delivery Note",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Box Price and Margin",
+   "link_count": 0,
+   "link_to": "Box Price and Margin",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Box WIP by Stage",
+   "link_count": 0,
+   "link_to": "Box WIP by Stage",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Job Profitability",
+   "link_count": 0,
+   "link_to": "Job Profitability",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Box Sales",
+ "number_cards": [
+  {
+   "label": "Costings Awaiting Approval",
+   "number_card_name": "Costings Awaiting Approval"
+  },
+  {
+   "label": "Boxes Below Min Margin",
+   "number_card_name": "Boxes Below Min Margin"
+  },
+  {
+   "label": "Open Box Work Orders",
+   "number_card_name": "Open Box Work Orders"
+  },
+  {
+   "label": "Open Complaints",
+   "number_card_name": "Open Complaints"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Sales User"
+  },
+  {
+   "role": "Sales Manager"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 33.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "Box Specification",
+   "link_to": "Box Specification",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "Box Costing",
+   "link_to": "Box Costing",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "label": "Sales Order",
+   "link_to": "Sales Order",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "",
+   "label": "Box WIP by Stage",
+   "link_to": "Box WIP by Stage",
+   "type": "Report"
+  }
+ ],
+ "title": "Box Sales"
+}
