@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "field:style_code",
+ "creation": "2026-10-22 19:40:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "style_code",
+  "style_name",
+  "fefco_code",
+  "cb_1",
+  "sheet_length_method",
+  "top_flap_factor",
+  "bottom_flap_factor",
+  "sb_desc",
+  "description",
+  "style_image"
+ ],
+ "fields": [
+  {
+   "fieldname": "style_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Style Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "style_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Style Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fefco_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "FEFCO Code"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Wrap Around",
+   "description": "Wrap Around: sheet = 2L + 2W + glue flap. Manual: sheet size entered on each Box Specification (trays, die-cut, pads).",
+   "fieldname": "sheet_length_method",
+   "fieldtype": "Select",
+   "label": "Sheet Size Method",
+   "options": "Wrap Around\nManual",
+   "reqd": 1
+  },
+  {
+   "default": "0.5",
+   "depends_on": "eval:doc.sheet_length_method=='Wrap Around'",
+   "fieldname": "top_flap_factor",
+   "fieldtype": "Float",
+   "label": "Top Flap Factor (x Width)",
+   "precision": "2"
+  },
+  {
+   "default": "0.5",
+   "depends_on": "eval:doc.sheet_length_method=='Wrap Around'",
+   "fieldname": "bottom_flap_factor",
+   "fieldtype": "Float",
+   "label": "Bottom Flap Factor (x Width)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "sb_desc",
+   "fieldtype": "Section Break",
+   "label": ""
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "style_image",
+   "fieldtype": "Attach Image",
+   "label": "Style Diagram"
+  }
+ ],
+ "image_field": "style_image",
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Box Style",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing User"
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User"
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

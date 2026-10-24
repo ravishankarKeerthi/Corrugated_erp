@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-22 19:40:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "production_entry",
+  "posting_date",
+  "production_stage",
+  "paper_reel",
+  "paper_item",
+  "supplier",
+  "quality_status"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "production_entry",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Production Entry",
+   "options": "Production Entry"
+  },
+  {
+   "columns": 1,
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "columns": 1,
+   "fieldname": "production_stage",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Stage"
+  },
+  {
+   "columns": 2,
+   "fieldname": "paper_reel",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reel",
+   "options": "Paper Reel"
+  },
+  {
+   "columns": 2,
+   "fieldname": "paper_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Paper",
+   "options": "Item"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "columns": 1,
+   "fieldname": "quality_status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reel QC"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Box Complaint Trace",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

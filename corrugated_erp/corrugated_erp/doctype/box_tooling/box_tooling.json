@@ -1,0 +1,216 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "field:tooling_no",
+ "creation": "2026-10-22 19:40:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tooling_no",
+  "tooling_type",
+  "status",
+  "cb_1",
+  "customer",
+  "box_spec",
+  "location",
+  "cb_2",
+  "vendor",
+  "made_on",
+  "cost",
+  "sb_life",
+  "impressions_life",
+  "impressions_used",
+  "cb_3",
+  "utilisation_pct",
+  "last_used_on",
+  "sb_desc",
+  "description",
+  "image"
+ ],
+ "fields": [
+  {
+   "fieldname": "tooling_no",
+   "fieldtype": "Data",
+   "label": "Tooling No",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "tooling_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tooling Type",
+   "options": "Die\nPrinting Plate",
+   "reqd": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nUnder Repair\nWith Customer\nScrapped"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "box_spec",
+   "fieldtype": "Link",
+   "label": "Box Specification",
+   "options": "Box Specification"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Storage Location / Rack"
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vendor",
+   "fieldtype": "Link",
+   "label": "Made By (Supplier)",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "made_on",
+   "fieldtype": "Date",
+   "label": "Made On"
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "label": "Cost"
+  },
+  {
+   "fieldname": "sb_life",
+   "fieldtype": "Section Break",
+   "label": "Life & Usage"
+  },
+  {
+   "fieldname": "impressions_life",
+   "fieldtype": "Int",
+   "label": "Expected Life (Impressions)"
+  },
+  {
+   "fieldname": "impressions_used",
+   "fieldtype": "Int",
+   "label": "Impressions Used",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "utilisation_pct",
+   "fieldtype": "Percent",
+   "label": "Life Used %",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_used_on",
+   "fieldtype": "Date",
+   "label": "Last Used On",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_desc",
+   "fieldtype": "Section Break",
+   "label": ""
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  }
+ ],
+ "image_field": "image",
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Box Tooling",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User"
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User"
+  }
+ ],
+ "search_fields": "tooling_type,customer,box_spec",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

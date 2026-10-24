@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-22 19:40:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "work_order",
+  "production_item",
+  "box_spec",
+  "qty",
+  "sheet_width_mm",
+  "sheet_length_mm",
+  "outs",
+  "used_width_mm",
+  "cuts_required",
+  "running_metres"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Work Order",
+   "options": "Work Order",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "work_order.production_item",
+   "fieldname": "production_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Box Item",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "work_order.box_spec",
+   "fieldname": "box_spec",
+   "fieldtype": "Link",
+   "label": "Box Specification",
+   "options": "Box Specification",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "work_order.qty",
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "work_order.sheet_width_mm",
+   "fieldname": "sheet_width_mm",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Sheet Width (mm)"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "work_order.sheet_length_mm",
+   "fieldname": "sheet_length_mm",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Sheet Length (mm)"
+  },
+  {
+   "columns": 1,
+   "default": "1",
+   "fieldname": "outs",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Outs",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "used_width_mm",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Used Width (mm)",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "cuts_required",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Cuts",
+   "read_only": 1
+  },
+  {
+   "fieldname": "running_metres",
+   "fieldtype": "Float",
+   "label": "Running Metres",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Deckle Plan Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

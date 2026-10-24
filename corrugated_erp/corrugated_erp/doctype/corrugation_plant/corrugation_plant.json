@@ -1,0 +1,231 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "field:company",
+ "creation": "2026-10-22 19:40:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "plant_name",
+  "cb_1",
+  "is_active",
+  "sb_note",
+  "note",
+  "sb_wh",
+  "reel_warehouse",
+  "scrap_warehouse",
+  "cb_wh",
+  "paper_price_list",
+  "selling_price_list",
+  "reel_naming_series",
+  "sb_cost",
+  "process_waste_pct",
+  "conversion_rate_per_kg",
+  "print_rate_per_colour_per_1000",
+  "cb_cost",
+  "gum_rate_per_kg",
+  "stitch_rate",
+  "scrap_rate_per_kg",
+  "cb_cost2",
+  "overhead_pct",
+  "default_margin_pct",
+  "min_margin_pct"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "plant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plant Name"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "sb_note",
+   "fieldtype": "Section Break",
+   "label": ""
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "HTML",
+   "label": "Note",
+   "options": "<p class='text-muted'>Fill only what differs from Corrugation Settings. Blank or zero means the global default is used.</p>"
+  },
+  {
+   "fieldname": "sb_wh",
+   "fieldtype": "Section Break",
+   "label": "Warehouses & Price Lists"
+  },
+  {
+   "fieldname": "reel_warehouse",
+   "fieldtype": "Link",
+   "label": "Reel Store Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "scrap_warehouse",
+   "fieldtype": "Link",
+   "label": "Scrap Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "cb_wh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "paper_price_list",
+   "fieldtype": "Link",
+   "label": "Paper Buying Price List",
+   "options": "Price List"
+  },
+  {
+   "fieldname": "selling_price_list",
+   "fieldtype": "Link",
+   "label": "Box Selling Price List",
+   "options": "Price List"
+  },
+  {
+   "description": "e.g. MDU-.YY.-.##### so reels of each plant are numbered separately",
+   "fieldname": "reel_naming_series",
+   "fieldtype": "Data",
+   "label": "Reel Number Series"
+  },
+  {
+   "fieldname": "sb_cost",
+   "fieldtype": "Section Break",
+   "label": "Costing Rates"
+  },
+  {
+   "fieldname": "process_waste_pct",
+   "fieldtype": "Percent",
+   "label": "Process + Trim Waste %"
+  },
+  {
+   "fieldname": "conversion_rate_per_kg",
+   "fieldtype": "Currency",
+   "label": "Conversion Cost per Kg"
+  },
+  {
+   "fieldname": "print_rate_per_colour_per_1000",
+   "fieldtype": "Currency",
+   "label": "Printing Cost per Colour per 1000 Boxes"
+  },
+  {
+   "fieldname": "cb_cost",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gum_rate_per_kg",
+   "fieldtype": "Currency",
+   "label": "Gum Rate per Kg"
+  },
+  {
+   "fieldname": "stitch_rate",
+   "fieldtype": "Currency",
+   "label": "Cost per Stitch",
+   "precision": "4"
+  },
+  {
+   "fieldname": "scrap_rate_per_kg",
+   "fieldtype": "Currency",
+   "label": "Scrap Valuation per Kg"
+  },
+  {
+   "fieldname": "cb_cost2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overhead_pct",
+   "fieldtype": "Percent",
+   "label": "Overhead %"
+  },
+  {
+   "fieldname": "default_margin_pct",
+   "fieldtype": "Percent",
+   "label": "Default Margin %"
+  },
+  {
+   "fieldname": "min_margin_pct",
+   "fieldtype": "Percent",
+   "label": "Minimum Margin %"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Corrugation Plant",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing User"
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User"
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

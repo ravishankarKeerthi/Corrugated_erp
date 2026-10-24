@@ -1,0 +1,717 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "format:BS-{#####}",
+ "creation": "2026-10-22 19:40:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "box_name",
+  "customer",
+  "customer_item_code",
+  "cb_head",
+  "status",
+  "revision",
+  "item_code",
+  "bom",
+  "sb_dims",
+  "box_style",
+  "sheet_length_method",
+  "dimension_basis",
+  "cb_dims1",
+  "length_mm",
+  "width_mm",
+  "height_mm",
+  "cb_dims2",
+  "dimension_inch",
+  "manual_sheet_length_mm",
+  "manual_sheet_width_mm",
+  "sb_board",
+  "ply",
+  "flute_1",
+  "flute_2",
+  "flute_3",
+  "cb_board",
+  "board_gsm",
+  "caliper_mm",
+  "caliper_override_mm",
+  "sb_layers",
+  "layers",
+  "sb_sheet",
+  "sheet_length_mm",
+  "sheet_width_mm",
+  "sheet_area_sqm",
+  "ups_per_sheet",
+  "cb_sheet1",
+  "sheet_length_inch",
+  "sheet_width_inch",
+  "box_weight_g",
+  "sheet_weight_g",
+  "cb_sheet2",
+  "suggested_deckle_mm",
+  "suggested_deckle_inch",
+  "outs_on_reel",
+  "deckle_trim_pct",
+  "sb_print",
+  "printing_type",
+  "no_of_colours",
+  "print_colours",
+  "plate_tooling",
+  "cb_print",
+  "joint_type",
+  "stitches_per_box",
+  "die_tooling",
+  "boxes_per_bundle",
+  "cb_print2",
+  "drawing",
+  "sb_artwork",
+  "artwork",
+  "artwork_version",
+  "artwork_status",
+  "cb_artwork",
+  "artwork_approved_on",
+  "artwork_approved_by",
+  "artwork_remarks",
+  "sb_quality",
+  "required_bs",
+  "theoretical_bs",
+  "cb_q1",
+  "ect_kn_per_m",
+  "estimated_bct_kgf",
+  "required_bct_kgf",
+  "cb_q2",
+  "moisture_max_pct",
+  "sb_costing",
+  "pricing_basis",
+  "latest_costing",
+  "latest_cost_per_box",
+  "cb_cost",
+  "latest_price_per_box",
+  "gum_kg_per_box",
+  "sb_notes",
+  "remarks",
+  "revision_note"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "box_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Box Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "customer_item_code",
+   "fieldtype": "Data",
+   "label": "Customer Part No"
+  },
+  {
+   "fieldname": "cb_head",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nDraft\nObsolete"
+  },
+  {
+   "default": "0",
+   "fieldname": "revision",
+   "fieldtype": "Int",
+   "label": "Revision",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Box Item",
+   "no_copy": 1,
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bom",
+   "fieldtype": "Link",
+   "label": "Default BOM",
+   "no_copy": 1,
+   "options": "BOM",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_dims",
+   "fieldtype": "Section Break",
+   "label": "Dimensions"
+  },
+  {
+   "fieldname": "box_style",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Box Style",
+   "options": "Box Style",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "box_style.sheet_length_method",
+   "fieldname": "sheet_length_method",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Sheet Size Method",
+   "read_only": 1
+  },
+  {
+   "default": "Inner",
+   "description": "Inner dimensions add board caliper at each score.",
+   "fieldname": "dimension_basis",
+   "fieldtype": "Select",
+   "label": "Dimension Basis",
+   "options": "Inner\nOuter"
+  },
+  {
+   "fieldname": "cb_dims1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "length_mm",
+   "fieldtype": "Float",
+   "label": "Length (mm)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "width_mm",
+   "fieldtype": "Float",
+   "label": "Width (mm)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "height_mm",
+   "fieldtype": "Float",
+   "label": "Height (mm)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_dims2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dimension_inch",
+   "fieldtype": "Data",
+   "label": "Size (inches)",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.sheet_length_method=='Manual'",
+   "fieldname": "manual_sheet_length_mm",
+   "fieldtype": "Float",
+   "label": "Sheet Length (mm) - Manual",
+   "mandatory_depends_on": "eval:doc.sheet_length_method=='Manual'"
+  },
+  {
+   "depends_on": "eval:doc.sheet_length_method=='Manual'",
+   "fieldname": "manual_sheet_width_mm",
+   "fieldtype": "Float",
+   "label": "Sheet Width (mm) - Manual",
+   "mandatory_depends_on": "eval:doc.sheet_length_method=='Manual'"
+  },
+  {
+   "fieldname": "sb_board",
+   "fieldtype": "Section Break",
+   "label": "Board Construction"
+  },
+  {
+   "default": "3",
+   "fieldname": "ply",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Ply",
+   "options": "3\n5\n7",
+   "reqd": 1
+  },
+  {
+   "fieldname": "flute_1",
+   "fieldtype": "Link",
+   "label": "Flute 1",
+   "options": "Flute Type",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.ply=='5' || doc.ply=='7'",
+   "fieldname": "flute_2",
+   "fieldtype": "Link",
+   "label": "Flute 2",
+   "mandatory_depends_on": "eval:doc.ply=='5' || doc.ply=='7'",
+   "options": "Flute Type"
+  },
+  {
+   "depends_on": "eval:doc.ply=='7'",
+   "fieldname": "flute_3",
+   "fieldtype": "Link",
+   "label": "Flute 3",
+   "mandatory_depends_on": "eval:doc.ply=='7'",
+   "options": "Flute Type"
+  },
+  {
+   "fieldname": "cb_board",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "board_gsm",
+   "fieldtype": "Float",
+   "label": "Board GSM",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "caliper_mm",
+   "fieldtype": "Float",
+   "label": "Board Caliper (mm)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "caliper_override_mm",
+   "fieldtype": "Float",
+   "label": "Caliper Override (mm)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "sb_layers",
+   "fieldtype": "Section Break",
+   "label": ""
+  },
+  {
+   "fieldname": "layers",
+   "fieldtype": "Table",
+   "label": "Layers",
+   "options": "Box Spec Layer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sb_sheet",
+   "fieldtype": "Section Break",
+   "label": "Sheet & Deckle"
+  },
+  {
+   "bold": 1,
+   "fieldname": "sheet_length_mm",
+   "fieldtype": "Float",
+   "label": "Sheet Length (mm)",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "sheet_width_mm",
+   "fieldtype": "Float",
+   "label": "Sheet Width / Cut Size (mm)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sheet_area_sqm",
+   "fieldtype": "Float",
+   "label": "Sheet Area (m²)",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "description": "Boxes cut from one corrugated sheet. Usually 1; 2, 4 or more for small die-cut boxes.",
+   "fieldname": "ups_per_sheet",
+   "fieldtype": "Int",
+   "label": "Ups per Sheet (Boxes per Sheet)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_sheet1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sheet_length_inch",
+   "fieldtype": "Float",
+   "label": "Sheet Length (inch)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sheet_width_inch",
+   "fieldtype": "Float",
+   "label": "Sheet Width (inch)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "box_weight_g",
+   "fieldtype": "Float",
+   "label": "Box Weight (g)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.ups_per_sheet>1",
+   "fieldname": "sheet_weight_g",
+   "fieldtype": "Float",
+   "label": "Sheet Weight (g)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_sheet2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "suggested_deckle_mm",
+   "fieldtype": "Float",
+   "label": "Suggested Reel Deckle (mm)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "suggested_deckle_inch",
+   "fieldtype": "Float",
+   "label": "Suggested Reel Deckle (inch)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "outs_on_reel",
+   "fieldtype": "Int",
+   "label": "Outs on Suggested Deckle",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deckle_trim_pct",
+   "fieldtype": "Percent",
+   "label": "Deckle Trim %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_print",
+   "fieldtype": "Section Break",
+   "label": "Printing & Finishing"
+  },
+  {
+   "default": "None",
+   "fieldname": "printing_type",
+   "fieldtype": "Select",
+   "label": "Printing",
+   "options": "None\nFlexo\nOffset Laminated\nScreen"
+  },
+  {
+   "depends_on": "eval:doc.printing_type!='None'",
+   "fieldname": "no_of_colours",
+   "fieldtype": "Int",
+   "label": "No. of Colours"
+  },
+  {
+   "depends_on": "eval:doc.printing_type!='None'",
+   "fieldname": "print_colours",
+   "fieldtype": "Small Text",
+   "label": "Colour Shades / Pantone"
+  },
+  {
+   "depends_on": "eval:doc.printing_type!='None'",
+   "fieldname": "plate_tooling",
+   "fieldtype": "Link",
+   "label": "Printing Plate",
+   "options": "Box Tooling"
+  },
+  {
+   "fieldname": "cb_print",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Stitched",
+   "fieldname": "joint_type",
+   "fieldtype": "Select",
+   "label": "Joint",
+   "options": "Stitched\nGlued\nTaped\nNone"
+  },
+  {
+   "depends_on": "eval:doc.joint_type=='Stitched'",
+   "fieldname": "stitches_per_box",
+   "fieldtype": "Int",
+   "label": "Stitches per Box"
+  },
+  {
+   "fieldname": "die_tooling",
+   "fieldtype": "Link",
+   "label": "Die",
+   "options": "Box Tooling"
+  },
+  {
+   "default": "25",
+   "fieldname": "boxes_per_bundle",
+   "fieldtype": "Int",
+   "label": "Boxes per Bundle"
+  },
+  {
+   "fieldname": "cb_print2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "drawing",
+   "fieldtype": "Attach Image",
+   "label": "Drawing / Photo"
+  },
+  {
+   "depends_on": "eval:doc.printing_type && doc.printing_type!='None'",
+   "fieldname": "sb_artwork",
+   "fieldtype": "Section Break",
+   "label": "Artwork Approval"
+  },
+  {
+   "fieldname": "artwork",
+   "fieldtype": "Attach",
+   "label": "Artwork"
+  },
+  {
+   "fieldname": "artwork_version",
+   "fieldtype": "Data",
+   "label": "Artwork Version"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "artwork_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Artwork Status",
+   "options": "Pending\nSent to Customer\nApproved\nRejected"
+  },
+  {
+   "fieldname": "cb_artwork",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.artwork_status=='Approved'",
+   "fieldname": "artwork_approved_on",
+   "fieldtype": "Date",
+   "label": "Approved On"
+  },
+  {
+   "depends_on": "eval:doc.artwork_status=='Approved'",
+   "fieldname": "artwork_approved_by",
+   "fieldtype": "Data",
+   "label": "Approved By (Customer Contact)"
+  },
+  {
+   "fieldname": "artwork_remarks",
+   "fieldtype": "Small Text",
+   "label": "Artwork Remarks"
+  },
+  {
+   "fieldname": "sb_quality",
+   "fieldtype": "Section Break",
+   "label": "Quality Specification"
+  },
+  {
+   "fieldname": "required_bs",
+   "fieldtype": "Float",
+   "label": "Required BS (kg/cm²)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "theoretical_bs",
+   "fieldtype": "Float",
+   "label": "Theoretical BS (kg/cm²)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_q1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "From lab test or paper supplier - used for the BCT estimate",
+   "fieldname": "ect_kn_per_m",
+   "fieldtype": "Float",
+   "label": "ECT (kN/m)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "estimated_bct_kgf",
+   "fieldtype": "Float",
+   "label": "Estimated BCT (kgf)",
+   "precision": "1",
+   "read_only": 1
+  },
+  {
+   "fieldname": "required_bct_kgf",
+   "fieldtype": "Float",
+   "label": "Required BCT (kgf)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "cb_q2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "moisture_max_pct",
+   "fieldtype": "Percent",
+   "label": "Max Moisture %"
+  },
+  {
+   "fieldname": "sb_costing",
+   "fieldtype": "Section Break",
+   "label": "Pricing & Costing"
+  },
+  {
+   "default": "Per Box",
+   "description": "Per Kg: the customer agrees a rate per kg; invoices can be raised in Kg or Nos.",
+   "fieldname": "pricing_basis",
+   "fieldtype": "Select",
+   "label": "Pricing Basis",
+   "options": "Per Box\nPer Kg"
+  },
+  {
+   "fieldname": "latest_costing",
+   "fieldtype": "Link",
+   "label": "Latest Costing",
+   "no_copy": 1,
+   "options": "Box Costing",
+   "read_only": 1
+  },
+  {
+   "fieldname": "latest_cost_per_box",
+   "fieldtype": "Currency",
+   "label": "Latest Cost / Box",
+   "no_copy": 1,
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_cost",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "latest_price_per_box",
+   "fieldtype": "Currency",
+   "label": "Latest Price / Box",
+   "no_copy": 1,
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gum_kg_per_box",
+   "fieldtype": "Float",
+   "label": "Gum per Box (kg)",
+   "precision": "6",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Special Instructions"
+  },
+  {
+   "description": "When size, ply, paper or ups change after the BOM is made, a new revision and BOM are created on save. Open Work Orders keep their old BOM.",
+   "fieldname": "revision_note",
+   "fieldtype": "Small Text",
+   "label": "Reason for Latest Change"
+  }
+ ],
+ "image_field": "drawing",
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Box Specification",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing User"
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User"
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager"
+  }
+ ],
+ "search_fields": "box_name,customer,customer_item_code",
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "box_name",
+ "track_changes": 1
+}

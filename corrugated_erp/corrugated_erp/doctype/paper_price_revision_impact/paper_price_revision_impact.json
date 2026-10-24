@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-22 19:40:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "box_spec",
+  "box_name",
+  "customer",
+  "box_costing",
+  "old_cost_per_box",
+  "new_cost_per_box",
+  "old_price_per_box",
+  "suggested_price_per_box",
+  "cost_change_pct",
+  "revised_costing"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "box_spec",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Box Specification",
+   "options": "Box Specification"
+  },
+  {
+   "fieldname": "box_name",
+   "fieldtype": "Data",
+   "label": "Box Name"
+  },
+  {
+   "columns": 2,
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "box_costing",
+   "fieldtype": "Link",
+   "label": "Current Costing",
+   "options": "Box Costing"
+  },
+  {
+   "columns": 1,
+   "fieldname": "old_cost_per_box",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Old Cost / Box",
+   "precision": "4"
+  },
+  {
+   "columns": 1,
+   "fieldname": "new_cost_per_box",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "New Cost / Box",
+   "precision": "4"
+  },
+  {
+   "columns": 1,
+   "fieldname": "old_price_per_box",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Current Price / Box",
+   "precision": "4"
+  },
+  {
+   "columns": 1,
+   "fieldname": "suggested_price_per_box",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Suggested Price / Box",
+   "precision": "4"
+  },
+  {
+   "columns": 1,
+   "fieldname": "cost_change_pct",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Cost Change %"
+  },
+  {
+   "fieldname": "revised_costing",
+   "fieldtype": "Link",
+   "label": "Revised Costing",
+   "no_copy": 1,
+   "options": "Box Costing"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Paper Price Revision Impact",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

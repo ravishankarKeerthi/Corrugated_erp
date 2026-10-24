@@ -1,0 +1,629 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "naming_series:",
+ "creation": "2026-10-22 19:40:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "box_spec",
+  "box_name",
+  "customer",
+  "item_code",
+  "cb_head",
+  "costing_date",
+  "valid_till",
+  "quantity",
+  "company",
+  "pricing_basis",
+  "sb_box",
+  "box_weight_g",
+  "box_weight_kg",
+  "sheet_area_sqm",
+  "cb_box",
+  "no_of_colours",
+  "stitches_per_box",
+  "gum_kg_per_box",
+  "sb_paper",
+  "papers",
+  "sb_rates",
+  "waste_pct",
+  "conversion_rate_per_kg",
+  "print_rate_per_colour_per_1000",
+  "cb_rates1",
+  "plate_cost",
+  "plate_amortise_qty",
+  "die_cost",
+  "die_amortise_qty",
+  "cb_rates2",
+  "stitch_rate",
+  "gum_rate",
+  "other_cost_per_box",
+  "cb_rates3",
+  "overhead_pct",
+  "freight_per_box",
+  "margin_pct",
+  "sb_breakup",
+  "paper_cost_per_box",
+  "waste_cost_per_box",
+  "conversion_cost_per_box",
+  "printing_cost_per_box",
+  "cb_b1",
+  "tooling_cost_per_box",
+  "stitching_cost_per_box",
+  "gum_cost_per_box",
+  "manufacturing_cost_per_box",
+  "cb_b2",
+  "overhead_cost_per_box",
+  "total_cost_per_box",
+  "cost_per_kg",
+  "sb_price",
+  "selling_price_per_box",
+  "price_per_kg",
+  "margin_per_box",
+  "cb_p1",
+  "quoted_price_per_box",
+  "quoted_price_per_kg",
+  "final_price_per_box",
+  "achieved_margin_pct",
+  "order_value",
+  "cb_p2",
+  "update_price_list",
+  "selling_price_list",
+  "sb_approval",
+  "min_margin_pct",
+  "approval_status",
+  "cb_approval",
+  "approved_by",
+  "approved_on",
+  "sb_remarks",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "BC-.YY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "BC-.YY.-.#####",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "box_spec",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Box Specification",
+   "options": "Box Specification",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "box_spec.box_name",
+   "fieldname": "box_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Box Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "box_spec.customer",
+   "fetch_if_empty": 1,
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "box_spec.item_code",
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Box Item",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_head",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "costing_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Costing Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valid_till",
+   "fieldtype": "Date",
+   "label": "Valid Till"
+  },
+  {
+   "default": "1000",
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Order Quantity (Boxes)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "remember_last_selected_value": 1
+  },
+  {
+   "fetch_from": "box_spec.pricing_basis",
+   "fetch_if_empty": 1,
+   "fieldname": "pricing_basis",
+   "fieldtype": "Select",
+   "label": "Pricing Basis",
+   "options": "Per Box\nPer Kg"
+  },
+  {
+   "fieldname": "sb_box",
+   "fieldtype": "Section Break",
+   "label": "Box Data"
+  },
+  {
+   "fieldname": "box_weight_g",
+   "fieldtype": "Float",
+   "label": "Box Weight (g)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "box_weight_kg",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Box Weight (kg)",
+   "precision": "5",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sheet_area_sqm",
+   "fieldtype": "Float",
+   "label": "Sheet Area (m²)",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_box",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "no_of_colours",
+   "fieldtype": "Int",
+   "label": "No. of Colours"
+  },
+  {
+   "fieldname": "stitches_per_box",
+   "fieldtype": "Int",
+   "label": "Stitches per Box"
+  },
+  {
+   "fieldname": "gum_kg_per_box",
+   "fieldtype": "Float",
+   "label": "Gum per Box (kg)",
+   "precision": "6",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_paper",
+   "fieldtype": "Section Break",
+   "label": "Paper Cost (refreshed from the Box Specification when the table is empty)"
+  },
+  {
+   "fieldname": "papers",
+   "fieldtype": "Table",
+   "label": "Paper",
+   "options": "Box Costing Paper"
+  },
+  {
+   "fieldname": "sb_rates",
+   "fieldtype": "Section Break",
+   "label": "Rates & Factors"
+  },
+  {
+   "fieldname": "waste_pct",
+   "fieldtype": "Percent",
+   "label": "Process + Trim Waste %"
+  },
+  {
+   "fieldname": "conversion_rate_per_kg",
+   "fieldtype": "Currency",
+   "label": "Conversion Cost per Kg"
+  },
+  {
+   "fieldname": "print_rate_per_colour_per_1000",
+   "fieldtype": "Currency",
+   "label": "Printing per Colour per 1000"
+  },
+  {
+   "fieldname": "cb_rates1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "plate_cost",
+   "fieldtype": "Currency",
+   "label": "Plate Cost"
+  },
+  {
+   "fieldname": "plate_amortise_qty",
+   "fieldtype": "Int",
+   "label": "Amortise Plate Over (Boxes)"
+  },
+  {
+   "fieldname": "die_cost",
+   "fieldtype": "Currency",
+   "label": "Die Cost"
+  },
+  {
+   "fieldname": "die_amortise_qty",
+   "fieldtype": "Int",
+   "label": "Amortise Die Over (Boxes)"
+  },
+  {
+   "fieldname": "cb_rates2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "stitch_rate",
+   "fieldtype": "Currency",
+   "label": "Cost per Stitch",
+   "precision": "4"
+  },
+  {
+   "fieldname": "gum_rate",
+   "fieldtype": "Currency",
+   "label": "Gum Rate per Kg"
+  },
+  {
+   "fieldname": "other_cost_per_box",
+   "fieldtype": "Currency",
+   "label": "Other Cost per Box",
+   "precision": "4"
+  },
+  {
+   "fieldname": "cb_rates3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overhead_pct",
+   "fieldtype": "Percent",
+   "label": "Overhead %"
+  },
+  {
+   "fieldname": "freight_per_box",
+   "fieldtype": "Currency",
+   "label": "Freight per Box",
+   "precision": "4"
+  },
+  {
+   "fieldname": "margin_pct",
+   "fieldtype": "Percent",
+   "label": "Margin (Mark-up) %"
+  },
+  {
+   "fieldname": "sb_breakup",
+   "fieldtype": "Section Break",
+   "label": "Cost Break-up per Box"
+  },
+  {
+   "fieldname": "paper_cost_per_box",
+   "fieldtype": "Currency",
+   "label": "Paper",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "fieldname": "waste_cost_per_box",
+   "fieldtype": "Currency",
+   "label": "Waste",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "fieldname": "conversion_cost_per_box",
+   "fieldtype": "Currency",
+   "label": "Conversion",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "fieldname": "printing_cost_per_box",
+   "fieldtype": "Currency",
+   "label": "Printing",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_b1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tooling_cost_per_box",
+   "fieldtype": "Currency",
+   "label": "Die & Plate",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "fieldname": "stitching_cost_per_box",
+   "fieldtype": "Currency",
+   "label": "Stitching",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gum_cost_per_box",
+   "fieldtype": "Currency",
+   "label": "Gum",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "fieldname": "manufacturing_cost_per_box",
+   "fieldtype": "Currency",
+   "label": "Manufacturing Cost",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_b2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overhead_cost_per_box",
+   "fieldtype": "Currency",
+   "label": "Overhead",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "total_cost_per_box",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Cost per Box",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_per_kg",
+   "fieldtype": "Currency",
+   "label": "Cost per Kg",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_price",
+   "fieldtype": "Section Break",
+   "label": "Price"
+  },
+  {
+   "bold": 1,
+   "fieldname": "selling_price_per_box",
+   "fieldtype": "Currency",
+   "label": "Calculated Price per Box",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "fieldname": "price_per_kg",
+   "fieldtype": "Currency",
+   "label": "Price per Kg",
+   "read_only": 1
+  },
+  {
+   "fieldname": "margin_per_box",
+   "fieldtype": "Currency",
+   "label": "Margin per Box",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_p1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.pricing_basis!='Per Kg'",
+   "fieldname": "quoted_price_per_box",
+   "fieldtype": "Currency",
+   "label": "Quoted Price per Box (optional)",
+   "precision": "4"
+  },
+  {
+   "depends_on": "eval:doc.pricing_basis=='Per Kg'",
+   "description": "Price per box = rate per kg x box weight.",
+   "fieldname": "quoted_price_per_kg",
+   "fieldtype": "Currency",
+   "label": "Agreed Rate per Kg"
+  },
+  {
+   "bold": 1,
+   "fieldname": "final_price_per_box",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Final Price per Box",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "fieldname": "achieved_margin_pct",
+   "fieldtype": "Percent",
+   "label": "Achieved Margin %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "order_value",
+   "fieldtype": "Currency",
+   "label": "Order Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_p2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "update_price_list",
+   "fieldtype": "Check",
+   "label": "Update Customer Price on Submit"
+  },
+  {
+   "depends_on": "update_price_list",
+   "fieldname": "selling_price_list",
+   "fieldtype": "Link",
+   "label": "Selling Price List",
+   "options": "Price List"
+  },
+  {
+   "fieldname": "sb_approval",
+   "fieldtype": "Section Break",
+   "label": "Margin Approval"
+  },
+  {
+   "fieldname": "min_margin_pct",
+   "fieldtype": "Percent",
+   "label": "Minimum Margin %",
+   "read_only": 1
+  },
+  {
+   "default": "Not Required",
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Approval Status",
+   "no_copy": 1,
+   "options": "Not Required\nPending Approval\nApproved",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_approval",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "no_copy": 1,
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_on",
+   "fieldtype": "Datetime",
+   "label": "Approved On",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_remarks",
+   "fieldtype": "Section Break",
+   "label": ""
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Box Costing",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Box Costing",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager"
+  }
+ ],
+ "search_fields": "box_spec,customer",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "box_name",
+ "track_changes": 1
+}

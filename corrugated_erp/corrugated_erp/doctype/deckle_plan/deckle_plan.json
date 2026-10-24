@@ -1,0 +1,194 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "naming_series:",
+ "creation": "2026-10-22 19:40:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "plan_date",
+  "status",
+  "workstation",
+  "cb_head",
+  "deckle_mm",
+  "deckle_inch",
+  "min_trim_mm",
+  "sb_items",
+  "items",
+  "sb_result",
+  "total_used_width_mm",
+  "trim_mm",
+  "cb_result",
+  "trim_pct",
+  "total_running_metres",
+  "sb_remarks",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "default": "DP-.YY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "DP-.YY.-.#####",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "plan_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Plan Date",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nPlanned\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "workstation",
+   "fieldtype": "Link",
+   "label": "Corrugator / Machine",
+   "options": "Workstation"
+  },
+  {
+   "fieldname": "cb_head",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deckle_mm",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Reel Deckle (mm)"
+  },
+  {
+   "fieldname": "deckle_inch",
+   "fieldtype": "Float",
+   "label": "Reel Deckle (inch)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "min_trim_mm",
+   "fieldtype": "Float",
+   "label": "Minimum Edge Trim (mm)"
+  },
+  {
+   "fieldname": "sb_items",
+   "fieldtype": "Section Break",
+   "label": "Work Orders on this Deckle"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Deckle Plan Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sb_result",
+   "fieldtype": "Section Break",
+   "label": "Result"
+  },
+  {
+   "fieldname": "total_used_width_mm",
+   "fieldtype": "Float",
+   "label": "Used Width (mm)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "trim_mm",
+   "fieldtype": "Float",
+   "label": "Trim (mm)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_result",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "trim_pct",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Trim %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_running_metres",
+   "fieldtype": "Float",
+   "label": "Total Running Metres",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_remarks",
+   "fieldtype": "Section Break",
+   "label": ""
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Deckle Plan",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

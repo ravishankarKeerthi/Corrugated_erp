@@ -1,0 +1,485 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-22 19:40:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sb_items",
+  "company",
+  "paper_item_group",
+  "box_item_group",
+  "box_item_prefix",
+  "cb_items",
+  "gum_item",
+  "stitch_wire_item",
+  "ink_item",
+  "scrap_item",
+  "sb_wh",
+  "reel_warehouse",
+  "scrap_warehouse",
+  "cb_wh",
+  "paper_price_list",
+  "selling_price_list",
+  "sb_sheet",
+  "glue_flap_mm",
+  "length_allowance_mm",
+  "width_allowance_mm",
+  "cb_sheet",
+  "liner_thickness_mm",
+  "min_deckle_trim_mm",
+  "sb_deckle",
+  "standard_deckles",
+  "sb_cost",
+  "process_waste_pct",
+  "conversion_rate_per_kg",
+  "print_rate_per_colour_per_1000",
+  "tooling_amortise_qty",
+  "cb_cost1",
+  "gum_gsm_per_glue_line",
+  "gum_rate_per_kg",
+  "stitch_rate",
+  "wire_g_per_stitch",
+  "ink_g_per_colour_per_box",
+  "cb_cost2",
+  "overhead_pct",
+  "default_margin_pct",
+  "sb_reel",
+  "reel_naming_series",
+  "min_reel_balance_kg",
+  "cb_reel",
+  "auto_submit_purchase_receipt",
+  "sb_prod",
+  "auto_submit_manufacture_entry",
+  "create_scrap_receipt",
+  "cb_prod",
+  "scrap_rate_per_kg",
+  "sb_quality",
+  "moisture_max_pct",
+  "dimension_tolerance_mm",
+  "cb_quality",
+  "gsm_tolerance_pct",
+  "sb_control",
+  "min_margin_pct",
+  "margin_approver_role",
+  "cb_control",
+  "block_print_without_artwork",
+  "weight_tolerance_pct",
+  "sb_plants",
+  "plants_note"
+ ],
+ "fields": [
+  {
+   "fieldname": "sb_items",
+   "fieldtype": "Section Break",
+   "label": "Company & Items"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Default Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "paper_item_group",
+   "fieldtype": "Link",
+   "label": "Kraft Paper Item Group",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "box_item_group",
+   "fieldtype": "Link",
+   "label": "Box Item Group",
+   "options": "Item Group"
+  },
+  {
+   "default": "BOX-",
+   "fieldname": "box_item_prefix",
+   "fieldtype": "Data",
+   "label": "Box Item Code Prefix"
+  },
+  {
+   "fieldname": "cb_items",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gum_item",
+   "fieldtype": "Link",
+   "label": "Gum / Starch Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "stitch_wire_item",
+   "fieldtype": "Link",
+   "label": "Stitching Wire Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "ink_item",
+   "fieldtype": "Link",
+   "label": "Printing Ink Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "scrap_item",
+   "fieldtype": "Link",
+   "label": "Paper Scrap Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "sb_wh",
+   "fieldtype": "Section Break",
+   "label": "Warehouses & Price Lists"
+  },
+  {
+   "fieldname": "reel_warehouse",
+   "fieldtype": "Link",
+   "label": "Reel Store Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "scrap_warehouse",
+   "fieldtype": "Link",
+   "label": "Scrap Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "cb_wh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Paper rates for box costing come from this price list.",
+   "fieldname": "paper_price_list",
+   "fieldtype": "Link",
+   "label": "Paper Buying Price List",
+   "options": "Price List"
+  },
+  {
+   "fieldname": "selling_price_list",
+   "fieldtype": "Link",
+   "label": "Box Selling Price List",
+   "options": "Price List"
+  },
+  {
+   "fieldname": "sb_sheet",
+   "fieldtype": "Section Break",
+   "label": "Sheet Size Allowances"
+  },
+  {
+   "default": "35",
+   "fieldname": "glue_flap_mm",
+   "fieldtype": "Float",
+   "label": "Glue / Stitch Flap (mm)"
+  },
+  {
+   "default": "0",
+   "fieldname": "length_allowance_mm",
+   "fieldtype": "Float",
+   "label": "Extra Sheet Length Allowance (mm)"
+  },
+  {
+   "default": "0",
+   "fieldname": "width_allowance_mm",
+   "fieldtype": "Float",
+   "label": "Extra Sheet Width Allowance (mm)"
+  },
+  {
+   "fieldname": "cb_sheet",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0.2",
+   "fieldname": "liner_thickness_mm",
+   "fieldtype": "Float",
+   "label": "Liner Thickness for Caliper (mm)",
+   "precision": "2"
+  },
+  {
+   "default": "20",
+   "fieldname": "min_deckle_trim_mm",
+   "fieldtype": "Float",
+   "label": "Minimum Edge Trim on Deckle (mm)"
+  },
+  {
+   "fieldname": "sb_deckle",
+   "fieldtype": "Section Break",
+   "label": "Standard Reel Deckles"
+  },
+  {
+   "fieldname": "standard_deckles",
+   "fieldtype": "Table",
+   "label": "Standard Deckles",
+   "options": "Corrugation Standard Deckle"
+  },
+  {
+   "fieldname": "sb_cost",
+   "fieldtype": "Section Break",
+   "label": "Costing Defaults"
+  },
+  {
+   "default": "3",
+   "fieldname": "process_waste_pct",
+   "fieldtype": "Percent",
+   "label": "Process + Trim Waste %"
+  },
+  {
+   "default": "6",
+   "fieldname": "conversion_rate_per_kg",
+   "fieldtype": "Currency",
+   "label": "Conversion Cost per Kg"
+  },
+  {
+   "default": "150",
+   "fieldname": "print_rate_per_colour_per_1000",
+   "fieldtype": "Currency",
+   "label": "Printing Cost per Colour per 1000 Boxes"
+  },
+  {
+   "default": "50000",
+   "fieldname": "tooling_amortise_qty",
+   "fieldtype": "Int",
+   "label": "Amortise Die / Plate Over (Boxes)"
+  },
+  {
+   "fieldname": "cb_cost1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "6",
+   "fieldname": "gum_gsm_per_glue_line",
+   "fieldtype": "Float",
+   "label": "Gum per Glue Line (g/m²)"
+  },
+  {
+   "default": "30",
+   "fieldname": "gum_rate_per_kg",
+   "fieldtype": "Currency",
+   "label": "Gum Rate per Kg"
+  },
+  {
+   "default": "0.05",
+   "fieldname": "stitch_rate",
+   "fieldtype": "Currency",
+   "label": "Cost per Stitch",
+   "precision": "4"
+  },
+  {
+   "default": "0.12",
+   "fieldname": "wire_g_per_stitch",
+   "fieldtype": "Float",
+   "label": "Wire per Stitch (g)",
+   "precision": "3"
+  },
+  {
+   "default": "0.4",
+   "fieldname": "ink_g_per_colour_per_box",
+   "fieldtype": "Float",
+   "label": "Ink per Colour per Box (g)",
+   "precision": "3"
+  },
+  {
+   "fieldname": "cb_cost2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "5",
+   "fieldname": "overhead_pct",
+   "fieldtype": "Percent",
+   "label": "Overhead %"
+  },
+  {
+   "default": "10",
+   "fieldname": "default_margin_pct",
+   "fieldtype": "Percent",
+   "label": "Default Margin %"
+  },
+  {
+   "fieldname": "sb_reel",
+   "fieldtype": "Section Break",
+   "label": "Reels"
+  },
+  {
+   "default": "RL-.YY.-.#####",
+   "description": "Used when the reel number is left blank on Reel Inward.",
+   "fieldname": "reel_naming_series",
+   "fieldtype": "Data",
+   "label": "Reel Number Series"
+  },
+  {
+   "default": "2",
+   "fieldname": "min_reel_balance_kg",
+   "fieldtype": "Float",
+   "label": "Mark Reel Consumed Below (kg)"
+  },
+  {
+   "fieldname": "cb_reel",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_submit_purchase_receipt",
+   "fieldtype": "Check",
+   "label": "Auto Submit Purchase Receipt from Reel Inward"
+  },
+  {
+   "fieldname": "sb_prod",
+   "fieldtype": "Section Break",
+   "label": "Production"
+  },
+  {
+   "default": "0",
+   "description": "When off, the final stage creates a draft Manufacture entry for the supervisor to check and submit.",
+   "fieldname": "auto_submit_manufacture_entry",
+   "fieldtype": "Check",
+   "label": "Auto Submit Finished Goods Entry"
+  },
+  {
+   "default": "1",
+   "fieldname": "create_scrap_receipt",
+   "fieldtype": "Check",
+   "label": "Book Production Waste into Scrap Stock"
+  },
+  {
+   "fieldname": "cb_prod",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "15",
+   "fieldname": "scrap_rate_per_kg",
+   "fieldtype": "Currency",
+   "label": "Scrap Valuation per Kg"
+  },
+  {
+   "fieldname": "sb_quality",
+   "fieldtype": "Section Break",
+   "label": "Quality"
+  },
+  {
+   "default": "9",
+   "fieldname": "moisture_max_pct",
+   "fieldtype": "Percent",
+   "label": "Max Moisture %"
+  },
+  {
+   "default": "3",
+   "fieldname": "dimension_tolerance_mm",
+   "fieldtype": "Float",
+   "label": "Dimension Tolerance (± mm)"
+  },
+  {
+   "fieldname": "cb_quality",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "5",
+   "fieldname": "gsm_tolerance_pct",
+   "fieldtype": "Percent",
+   "label": "GSM Tolerance (± %)"
+  },
+  {
+   "fieldname": "sb_control",
+   "fieldtype": "Section Break",
+   "label": "Controls & Approvals"
+  },
+  {
+   "default": "8",
+   "fieldname": "min_margin_pct",
+   "fieldtype": "Percent",
+   "label": "Minimum Margin % (below this needs approval)"
+  },
+  {
+   "default": "Sales Manager",
+   "fieldname": "margin_approver_role",
+   "fieldtype": "Link",
+   "label": "Margin Approver Role",
+   "options": "Role"
+  },
+  {
+   "fieldname": "cb_control",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "block_print_without_artwork",
+   "fieldtype": "Check",
+   "label": "Block Printing Until Artwork Approved"
+  },
+  {
+   "default": "0.5",
+   "description": "Shortage within this % of the supplier invoice weight is ignored.",
+   "fieldname": "weight_tolerance_pct",
+   "fieldtype": "Percent",
+   "label": "Reel Weight Shortage Tolerance %"
+  },
+  {
+   "fieldname": "sb_plants",
+   "fieldtype": "Section Break",
+   "label": "Plants"
+  },
+  {
+   "fieldname": "plants_note",
+   "fieldtype": "HTML",
+   "label": "Plants Note",
+   "options": "<p class='text-muted'>Running more than one plant or company? Create a <b>Corrugation Plant</b> for each company. Values filled there override these defaults for that company.</p>"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Corrugation Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing User"
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User"
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

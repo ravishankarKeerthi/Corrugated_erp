@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-22 19:40:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parameter",
+  "uom",
+  "reading_type",
+  "min_value",
+  "max_value",
+  "observed_value",
+  "visual_result",
+  "result",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "parameter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Parameter",
+   "options": "Box Quality Parameter",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "parameter.uom",
+   "fieldname": "uom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unit",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "parameter.reading_type",
+   "fieldname": "reading_type",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Reading Type",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "min_value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Min"
+  },
+  {
+   "columns": 1,
+   "fieldname": "max_value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Max"
+  },
+  {
+   "columns": 1,
+   "depends_on": "eval:doc.reading_type!='Visual'",
+   "fieldname": "observed_value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Observed"
+  },
+  {
+   "columns": 1,
+   "depends_on": "eval:doc.reading_type=='Visual'",
+   "fieldname": "visual_result",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Visual Check",
+   "options": "\nOK\nNot OK"
+  },
+  {
+   "columns": 1,
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Result",
+   "options": "\nPass\nFail",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Box Quality Test Reading",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
