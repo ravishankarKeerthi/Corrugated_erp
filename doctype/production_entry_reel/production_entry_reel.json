@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-22 19:40:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "paper_reel",
+  "layer",
+  "paper_item",
+  "deckle_mm",
+  "batch_no",
+  "warehouse",
+  "opening_weight",
+  "closing_weight",
+  "consumed_kg"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "paper_reel",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reel",
+   "options": "Paper Reel",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "layer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Layer"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "paper_reel.paper_item",
+   "fieldname": "paper_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Paper Item",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "paper_reel.deckle_mm",
+   "fieldname": "deckle_mm",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Deckle (mm)",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "paper_reel.batch_no",
+   "fieldname": "batch_no",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "Batch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "paper_reel.warehouse",
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fetch_from": "paper_reel.current_weight",
+   "fieldname": "opening_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Opening (kg)",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "closing_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Balance (kg)",
+   "non_negative": 1
+  },
+  {
+   "bold": 1,
+   "columns": 1,
+   "fieldname": "consumed_kg",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Consumed (kg)",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Production Entry Reel",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

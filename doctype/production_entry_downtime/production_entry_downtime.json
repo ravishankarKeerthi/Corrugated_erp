@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-22 19:40:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reason",
+  "from_time",
+  "to_time",
+  "minutes",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "reason",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Reason",
+   "options": "Breakdown - Mechanical\nBreakdown - Electrical\nPower Cut\nNo Paper / Material\nWaiting for Order\nSetup / Changeover\nGum / Steam Problem\nOperator Not Available\nQuality Hold\nPlanned Maintenance\nOther",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "from_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "From"
+  },
+  {
+   "columns": 1,
+   "fieldname": "to_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "To"
+  },
+  {
+   "columns": 1,
+   "fieldname": "minutes",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Minutes",
+   "non_negative": 1
+  },
+  {
+   "columns": 4,
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Production Entry Downtime",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

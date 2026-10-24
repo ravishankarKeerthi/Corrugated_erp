@@ -1,0 +1,623 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "naming_series:",
+ "creation": "2026-10-22 19:40:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "title",
+  "posting_date",
+  "shift",
+  "production_stage",
+  "stage_type",
+  "consumes_reels",
+  "is_final_stage",
+  "tooling_type",
+  "cb_head1",
+  "work_order",
+  "production_item",
+  "box_spec",
+  "customer",
+  "sales_order",
+  "company",
+  "cb_head2",
+  "workstation",
+  "operator",
+  "operator_name",
+  "supervisor",
+  "sb_time",
+  "start_time",
+  "end_time",
+  "cb_time",
+  "duration_hrs",
+  "net_run_hrs",
+  "cb_time2",
+  "output_per_hour",
+  "availability_pct",
+  "sb_downtime",
+  "downtime",
+  "total_downtime_min",
+  "sb_qty",
+  "wo_qty",
+  "input_qty",
+  "cb_qty1",
+  "output_qty",
+  "rejected_qty",
+  "cb_qty2",
+  "output_in",
+  "ups",
+  "box_equivalent",
+  "tooling",
+  "sb_corr",
+  "deckle_mm",
+  "outs",
+  "cb_corr",
+  "sheet_length_mm",
+  "sheet_width_mm",
+  "sb_reels",
+  "reels",
+  "total_reel_consumed_kg",
+  "sb_materials",
+  "materials",
+  "sb_waste",
+  "waste",
+  "total_waste_kg",
+  "sb_labour",
+  "contractor",
+  "piece_rate",
+  "cb_labour",
+  "piece_rate_basis",
+  "labour_amount",
+  "sb_links",
+  "material_transfer_entry",
+  "manufacture_entry",
+  "scrap_entry",
+  "cb_links",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "PE-.YY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "PE-.YY.-.#####",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title",
+   "no_copy": 1,
+   "print_hide": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "default": "General",
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "General\nA\nB\nC"
+  },
+  {
+   "fieldname": "production_stage",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Stage",
+   "options": "Production Stage",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "production_stage.stage_type",
+   "fieldname": "stage_type",
+   "fieldtype": "Data",
+   "label": "Stage Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "production_stage.consumes_reels",
+   "fieldname": "consumes_reels",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Consumes Reels",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "production_stage.is_final_stage",
+   "fieldname": "is_final_stage",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Final Stage",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "production_stage.tooling_type",
+   "fieldname": "tooling_type",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Tooling Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_head1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Work Order",
+   "options": "Work Order",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "work_order.production_item",
+   "fieldname": "production_item",
+   "fieldtype": "Link",
+   "label": "Box Item",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "work_order.box_spec",
+   "fieldname": "box_spec",
+   "fieldtype": "Link",
+   "label": "Box Specification",
+   "options": "Box Specification",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "box_spec.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "work_order.sales_order",
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "work_order.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_head2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "workstation",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Machine",
+   "options": "Workstation"
+  },
+  {
+   "fieldname": "operator",
+   "fieldtype": "Link",
+   "label": "Operator",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "operator.employee_name",
+   "fieldname": "operator_name",
+   "fieldtype": "Data",
+   "label": "Operator Name",
+   "read_only": 1
+  },
+  {
+   "default": "__user",
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "User"
+  },
+  {
+   "fieldname": "sb_time",
+   "fieldtype": "Section Break",
+   "label": "Time"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "label": "End Time"
+  },
+  {
+   "fieldname": "cb_time",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "duration_hrs",
+   "fieldtype": "Float",
+   "label": "Duration (hrs)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_run_hrs",
+   "fieldtype": "Float",
+   "label": "Running Hours (after downtime)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_time2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "output_per_hour",
+   "fieldtype": "Float",
+   "label": "Output per Running Hour",
+   "precision": "1",
+   "read_only": 1
+  },
+  {
+   "fieldname": "availability_pct",
+   "fieldtype": "Percent",
+   "label": "Availability %",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "collapsible_depends_on": "downtime",
+   "fieldname": "sb_downtime",
+   "fieldtype": "Section Break",
+   "label": "Downtime"
+  },
+  {
+   "fieldname": "downtime",
+   "fieldtype": "Table",
+   "label": "Downtime",
+   "options": "Production Entry Downtime"
+  },
+  {
+   "fieldname": "total_downtime_min",
+   "fieldtype": "Float",
+   "label": "Total Downtime (min)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_qty",
+   "fieldtype": "Section Break",
+   "label": "Quantity"
+  },
+  {
+   "fetch_from": "work_order.qty",
+   "fieldname": "wo_qty",
+   "fieldtype": "Float",
+   "label": "Work Order Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "input_qty",
+   "fieldtype": "Float",
+   "label": "Input Qty (Nos)"
+  },
+  {
+   "fieldname": "cb_qty1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "output_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Good Output (Nos)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rejected_qty",
+   "fieldtype": "Float",
+   "label": "Rejected (Nos)"
+  },
+  {
+   "fieldname": "cb_qty2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "production_stage.output_in",
+   "fieldname": "output_in",
+   "fieldtype": "Data",
+   "label": "Output Counted In",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "box_spec.ups_per_sheet",
+   "fieldname": "ups",
+   "fieldtype": "Int",
+   "label": "Ups per Sheet",
+   "read_only": 1
+  },
+  {
+   "description": "Good output converted to boxes (sheets x ups)",
+   "fieldname": "box_equivalent",
+   "fieldtype": "Float",
+   "label": "Box Equivalent (Nos)",
+   "read_only": 1
+  },
+  {
+   "depends_on": "tooling_type",
+   "fieldname": "tooling",
+   "fieldtype": "Link",
+   "label": "Die / Plate Used",
+   "options": "Box Tooling"
+  },
+  {
+   "depends_on": "consumes_reels",
+   "fieldname": "sb_corr",
+   "fieldtype": "Section Break",
+   "label": "Corrugation Run"
+  },
+  {
+   "fieldname": "deckle_mm",
+   "fieldtype": "Float",
+   "label": "Reel Deckle Used (mm)"
+  },
+  {
+   "fieldname": "outs",
+   "fieldtype": "Int",
+   "label": "Outs"
+  },
+  {
+   "fieldname": "cb_corr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "box_spec.sheet_length_mm",
+   "fieldname": "sheet_length_mm",
+   "fieldtype": "Float",
+   "label": "Sheet Length (mm)",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "box_spec.sheet_width_mm",
+   "fieldname": "sheet_width_mm",
+   "fieldtype": "Float",
+   "label": "Sheet Width (mm)",
+   "read_only": 1
+  },
+  {
+   "depends_on": "consumes_reels",
+   "fieldname": "sb_reels",
+   "fieldtype": "Section Break",
+   "label": "Reels Consumed"
+  },
+  {
+   "fieldname": "reels",
+   "fieldtype": "Table",
+   "label": "Reels",
+   "options": "Production Entry Reel"
+  },
+  {
+   "bold": 1,
+   "fieldname": "total_reel_consumed_kg",
+   "fieldtype": "Float",
+   "label": "Total Paper Consumed (kg)",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "collapsible_depends_on": "materials",
+   "fieldname": "sb_materials",
+   "fieldtype": "Section Break",
+   "label": "Other Materials Used (gum, ink, wire...)"
+  },
+  {
+   "description": "Actual quantities are transferred to the Work Order and consumed instead of the BOM standard.",
+   "fieldname": "materials",
+   "fieldtype": "Table",
+   "label": "Materials",
+   "options": "Production Entry Material"
+  },
+  {
+   "fieldname": "sb_waste",
+   "fieldtype": "Section Break",
+   "label": "Waste"
+  },
+  {
+   "fieldname": "waste",
+   "fieldtype": "Table",
+   "label": "Waste",
+   "options": "Production Entry Waste"
+  },
+  {
+   "fieldname": "total_waste_kg",
+   "fieldtype": "Float",
+   "label": "Total Waste (kg)",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "collapsible_depends_on": "piece_rate",
+   "fieldname": "sb_labour",
+   "fieldtype": "Section Break",
+   "label": "Contract Labour"
+  },
+  {
+   "fieldname": "contractor",
+   "fieldtype": "Link",
+   "label": "Labour Contractor",
+   "options": "Supplier"
+  },
+  {
+   "fetch_from": "production_stage.piece_rate",
+   "fetch_if_empty": 1,
+   "fieldname": "piece_rate",
+   "fieldtype": "Currency",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "cb_labour",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "production_stage.piece_rate_basis",
+   "fetch_if_empty": 1,
+   "fieldname": "piece_rate_basis",
+   "fieldtype": "Select",
+   "label": "Rate Basis",
+   "options": "Per 1000 Nos\nPer Nos"
+  },
+  {
+   "fieldname": "labour_amount",
+   "fieldtype": "Currency",
+   "label": "Labour Amount",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb_links",
+   "fieldtype": "Section Break",
+   "label": "Stock Entries"
+  },
+  {
+   "fieldname": "material_transfer_entry",
+   "fieldtype": "Link",
+   "label": "Reel Transfer Entry",
+   "no_copy": 1,
+   "options": "Stock Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "manufacture_entry",
+   "fieldtype": "Link",
+   "label": "Finished Goods Entry",
+   "no_copy": 1,
+   "options": "Stock Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "scrap_entry",
+   "fieldtype": "Link",
+   "label": "Scrap Entry",
+   "no_copy": 1,
+   "options": "Stock Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_links",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Production Entry",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-22 19:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Corrugated ERP",
+ "name": "Production Entry",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User"
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager"
+  }
+ ],
+ "search_fields": "work_order,production_stage,posting_date",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title",
+ "track_changes": 1
+}
